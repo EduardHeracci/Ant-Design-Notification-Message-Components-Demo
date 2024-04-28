@@ -1,2 +1,2 @@
-export { MessageProvider } from "./MessageProvider";
-export { NotificationProvider } from "./NotificationProvider";
+export { MessageProvider, MessageContext } from "./MessageProvider";
+export { NotificationProvider, NotificationContext } from "./NotificationProvider";
