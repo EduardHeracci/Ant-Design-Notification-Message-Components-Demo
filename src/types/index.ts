@@ -7,7 +7,7 @@ export type NotificationType = "success" | "info" | "warning" | "error";
 export type MessageType = "success" | "info" | "warning" | "error";
 
 export type INotification = {
-  api: NotificationInstance;
+  noficationApi: NotificationInstance;
   contextNotificationHolder: React.ReactElement<unknown, string | JSXElementConstructor<unknown>>;
   openNotification: (type: NotificationType, message: string | React.ReactNode) => void;
 };
