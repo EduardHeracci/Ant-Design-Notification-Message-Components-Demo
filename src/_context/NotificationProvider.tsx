@@ -5,10 +5,10 @@ import { notification } from "antd";
 export const NotificationContext = createContext<INotification | null>(null);
 
 export const NotificationProvider = ({ children }: React.PropsWithChildren) => {
-  const [noficationApi, contextNotificationHolder] = notification.useNotification();
+  const [notificationApi, contextNotificationHolder] = notification.useNotification();
 
   const openNotification = (type: NotificationType, message: string | React.ReactNode) => {
-    noficationApi[type]({
+    notificationApi[type]({
       message,
       style: { marginBottom: -7 },
       duration: 3,
@@ -17,7 +17,7 @@ export const NotificationProvider = ({ children }: React.PropsWithChildren) => {
 
   return (
     <NotificationContext.Provider
-      value={{ noficationApi, contextNotificationHolder, openNotification }}>
+      value={{ notificationApi, contextNotificationHolder, openNotification }}>
       {children}
     </NotificationContext.Provider>
   );
