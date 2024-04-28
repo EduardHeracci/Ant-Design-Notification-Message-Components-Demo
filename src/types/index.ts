@@ -7,22 +7,13 @@ export type NotificationType = "success" | "info" | "warning" | "error";
 export type MessageType = "success" | "info" | "warning" | "error";
 
 export type INotification = {
-	api: NotificationInstance;
-	contextNotificationHolder: React.ReactElement<
-		unknown,
-		string | JSXElementConstructor<unknown>
-	>;
-	openNotification: (
-		type: NotificationType,
-		message: string | React.ReactNode
-	) => void;
+  api: NotificationInstance;
+  contextNotificationHolder: React.ReactElement<unknown, string | JSXElementConstructor<unknown>>;
+  openNotification: (type: NotificationType, message: string | React.ReactNode) => void;
 };
 
 export type IMessage = {
-	messageApi: MessageInstance;
-	contextMessageHolder: React.ReactElement<
-		unknown,
-		string | JSXElementConstructor<unknown>
-	>;
-	openMessage: (type: MessageType, content: string | React.ReactNode) => void;
+  messageApi: MessageInstance;
+  contextMessageHolder: React.ReactElement<unknown, string | JSXElementConstructor<unknown>>;
+  openMessage: (type: MessageType, content: string | React.ReactNode) => void;
 };
