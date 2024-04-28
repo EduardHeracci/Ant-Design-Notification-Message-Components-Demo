@@ -3,9 +3,9 @@ import { INotification } from "../types";
 import { NotificationContext } from "../_context/NotificationProvider";
 
 export const useNotificationContext = () => {
-  const { contextNotificationHolder, openNotification } = useContext(
+  const { notificationApi, contextNotificationHolder, openNotification } = useContext(
     NotificationContext
   ) as INotification;
 
-  return { contextNotificationHolder, openNotification };
+  return { notificationApi, contextNotificationHolder, openNotification };
 };
